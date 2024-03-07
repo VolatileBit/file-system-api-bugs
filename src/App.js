@@ -30,11 +30,11 @@ function App() {
       });
       const allHandles = await getFileHandles(directoryHandle, undefined);
       setFileCount(allHandles.length);
-      console.log("Bug #1: file count", fileCount);
+      console.log("Bug #1: file count", allHandles.length);
       setInterval(async () => {
         const allHandles = await getFileHandles(directoryHandle, undefined);
         setFileCount(allHandles.length);
-        console.log("Bug #1: file count", fileCount);
+        console.log("Bug #1: file count", allHandles.length);
       }, 3000);
     } catch (err) {
       if (err.name !== "AbortError") {
